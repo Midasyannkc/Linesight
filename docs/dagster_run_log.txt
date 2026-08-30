@@ -1,0 +1,16 @@
+2026-08-29 21:28:56 +0000 - dagster - DEBUG - __ASSET_JOB - 82985467-c6ad-4fcb-9547-d3e8e4e8b778 - 1685 - databricks_transform - STEP_START - Started execution of step "databricks_transform".
+2026-08-29 21:29:33 +0000 - dagster - DEBUG - __ASSET_JOB - 82985467-c6ad-4fcb-9547-d3e8e4e8b778 - 1685 - databricks_transform - STEP_SUCCESS - Finished execution of step "databricks_transform" in 37.15s.
+2026-08-29 21:29:34 +0000 - dagster - DEBUG - __ASSET_JOB - 82985467-c6ad-4fcb-9547-d3e8e4e8b778 - 2752 - predictive_maintenance_model - STEP_START - Started execution of step "predictive_maintenance_model".
+Precision: 0.214, Recall: 0.925, F1: 0.348, ROC-AUC: 0.976
+2026-08-29 21:29:54 +0000 - dagster - DEBUG - __ASSET_JOB - 82985467-c6ad-4fcb-9547-d3e8e4e8b778 - 2752 - predictive_maintenance_model - STEP_SUCCESS - Finished execution of step "predictive_maintenance_model" in 19.73s.
+2026-08-29 21:29:56 +0000 - dagster - DEBUG - __ASSET_JOB - 82985467-c6ad-4fcb-9547-d3e8e4e8b778 - 2771 - spc_control_charts - STEP_START - Started execution of step "spc_control_charts".
+  LINE-A: Cpk=0.017, out-of-control subgroups=262/972 (27.0%)
+  LINE-B: Cpk=0.021, out-of-control subgroups=65/972 (6.7%)
+  LINE-C: Cpk=0.029, out-of-control subgroups=82/972 (8.4%)
+  LINE-D: Cpk=0.02, out-of-control subgroups=139/972 (14.3%)
+2026-08-29 21:29:56 +0000 - dagster - DEBUG - __ASSET_JOB - 82985467-c6ad-4fcb-9547-d3e8e4e8b778 - 2771 - spc_control_charts - STEP_SUCCESS - Finished execution of step "spc_control_charts" in 198ms.
+2026-08-29 21:29:58 +0000 - dagster - DEBUG - __ASSET_JOB - 82985467-c6ad-4fcb-9547-d3e8e4e8b778 - 2780 - sync_to_snowflake - STEP_START - Started execution of step "sync_to_snowflake".
+2026-08-29 21:29:58 +0000 - dagster - DEBUG - __ASSET_JOB - 82985467-c6ad-4fcb-9547-d3e8e4e8b778 - 2780 - sync_to_snowflake - STEP_SUCCESS - Finished execution of step "sync_to_snowflake" in 238ms.
+2026-08-29 21:29:59 +0000 - dagster - DEBUG - __ASSET_JOB - 82985467-c6ad-4fcb-9547-d3e8e4e8b778 - 2789 - dbt_build_snowflake - STEP_START - Started execution of step "dbt_build_snowflake".
+2026-08-29 21:30:03 +0000 - dagster - DEBUG - __ASSET_JOB - 82985467-c6ad-4fcb-9547-d3e8e4e8b778 - 2789 - dbt_build_snowflake - STEP_SUCCESS - Finished execution of step "dbt_build_snowflake" in 3.35s.
+2026-08-29 21:30:03 +0000 - dagster - DEBUG - __ASSET_JOB - 82985467-c6ad-4fcb-9547-d3e8e4e8b778 - 1679 - RUN_SUCCESS - Finished execution of run for "__ASSET_JOB".

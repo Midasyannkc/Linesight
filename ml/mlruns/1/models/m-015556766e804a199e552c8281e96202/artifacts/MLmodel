@@ -1,0 +1,23 @@
+artifact_path: /home/claude/linesight/ml/mlruns/1/models/m-015556766e804a199e552c8281e96202/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.skops
+    predict_fn: predict
+    python_version: 3.12.3
+  sklearn:
+    code: null
+    pickled_model: model.skops
+    serialization_format: skops
+    sklearn_version: 1.8.0
+    skops_trusted_types: null
+mlflow_version: 3.15.2
+model_id: m-015556766e804a199e552c8281e96202
+model_size_bytes: 6211712
+model_uuid: m-015556766e804a199e552c8281e96202
+prompts: null
+run_id: 468dc4fb05f04d32bebd269f5fddec4b
+utc_time_created: '2026-08-29 21:24:15.107622'

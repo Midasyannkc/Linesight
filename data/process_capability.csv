@@ -1,0 +1,5 @@
+line_id,n_subgroups,xbar_bar,r_bar,sigma_hat,cpk,out_of_control_subgroups,out_of_control_pct
+LINE-A,972,50.2944,0.2622,0.1127,0.017,262,0.2695
+LINE-B,972,50.2909,0.3338,0.1435,0.021,65,0.0669
+LINE-C,972,50.2877,0.3347,0.1439,0.029,82,0.0844
+LINE-D,972,50.2919,0.3075,0.1322,0.02,139,0.143

@@ -1,0 +1,11 @@
+linesight:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: linesight.duckdb
+      schema: main
+      # Production target: Snowflake, synced from Databricks gold
+      # tables via Delta Sharing or a scheduled load (see
+      # snowflake_sync/schema.sql). DuckDB used here so this half of
+      # the hybrid architecture is independently runnable and verifiable.

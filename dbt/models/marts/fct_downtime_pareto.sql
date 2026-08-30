@@ -1,0 +1,21 @@
+-- CERTIFIED. Downtime-reason Pareto, the actionable list a plant
+-- manager works from to prioritize improvement projects.
+
+{{ config(materialized='table') }}
+
+with by_reason as (
+    select
+        reason,
+        count(*) as event_count,
+        round(sum(downtime_hours), 2) as total_downtime_hours
+    from {{ ref('stg_downtime_events') }}
+    group by reason
+)
+
+select
+    reason,
+    event_count,
+    total_downtime_hours,
+    round(total_downtime_hours * 1.0 / sum(total_downtime_hours) over (), 4) as pct_of_total_downtime
+from by_reason
+order by total_downtime_hours desc

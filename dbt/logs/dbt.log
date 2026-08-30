@@ -1,0 +1,1507 @@
+[0m21:27:41.489786 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc6f41fed80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc6f4267230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc6f4264d10>]}
+
+
+============================== 21:27:41.492784 | 3f8e9830-4ae3-42bf-95d6-2ebb8636acac ==============================
+[0m21:27:41.492784 [info ] [MainThread]: Running with dbt=1.12.3
+[0m21:27:41.493277 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'warn_error': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt build', 'maximum_seed_size_mib': '1', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False', 'log_format': 'default', 'cache_selected_only': 'False', 'empty': 'False', 'target_path': 'None', 'debug': 'False', 'printer_width': '80', 'use_experimental_parser': 'False', 'write_json': 'True', 'hints_enabled': 'True', 'introspect': 'True', 'indirect_selection': 'eager', 'fail_fast': 'False', 'static_parser': 'True', 'no_print': 'None', 'log_path': '/home/claude/linesight/dbt/logs', 'use_colors': 'True', 'version_check': 'True', 'profiles_dir': '.'}
+[0m21:27:41.876284 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3f8e9830-4ae3-42bf-95d6-2ebb8636acac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc6f691dd90>]}
+[0m21:27:41.972930 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3f8e9830-4ae3-42bf-95d6-2ebb8636acac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc6f33fae70>]}
+[0m21:27:41.975246 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m21:27:42.064246 [debug] [MainThread]: checksum: 1123a4b5193207071531f548736a92afb735feab380f6fa4cd3418f3dbbd45ec, vars: {}, profile: linesight, target: dev, version: 1.12.3
+[0m21:27:42.064732 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m21:27:42.065020 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '3f8e9830-4ae3-42bf-95d6-2ebb8636acac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc6eed017c0>]}
+[0m21:27:43.878481 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3f8e9830-4ae3-42bf-95d6-2ebb8636acac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc6ee4c1310>]}
+[0m21:27:43.977932 [debug] [MainThread]: Wrote artifact WritableManifest to /home/claude/linesight/dbt/target/manifest.json
+[0m21:27:43.980280 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/claude/linesight/dbt/target/semantic_manifest.json
+[0m21:27:43.994820 [debug] [MainThread]: Wrote artifact OsiDocument to /home/claude/linesight/dbt/target/osi_document.json
+[0m21:27:44.085093 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3f8e9830-4ae3-42bf-95d6-2ebb8636acac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc6ee342f90>]}
+[0m21:27:44.085506 [info ] [MainThread]: Found 4 models, 7 data tests, 4 sources, 500 macros
+[0m21:27:44.087822 [info ] [MainThread]: 
+[0m21:27:44.088209 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:27:44.088435 [info ] [MainThread]: 
+[0m21:27:44.088849 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m21:27:44.093694 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_linesight'
+[0m21:27:44.249594 [debug] [ThreadPool]: Using duckdb connection "list_linesight"
+[0m21:27:44.249951 [debug] [ThreadPool]: On list_linesight: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "connection_name": "list_linesight"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"linesight"'
+    
+  
+  
+[0m21:27:44.250230 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:27:44.264452 [debug] [ThreadPool]: SQL status: OK in 0.014 seconds
+[0m21:27:44.265729 [debug] [ThreadPool]: On list_linesight: Close
+[0m21:27:44.267165 [debug] [ThreadPool]: Using duckdb connection "list_linesight"
+[0m21:27:44.267465 [debug] [ThreadPool]: On list_linesight: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "connection_name": "list_linesight"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"linesight"'
+    
+  
+  
+[0m21:27:44.267767 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:27:44.268790 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m21:27:44.269970 [debug] [ThreadPool]: On list_linesight: Close
+[0m21:27:44.270662 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_linesight, now create_linesight_main_staging)
+[0m21:27:44.271169 [debug] [ThreadPool]: Creating schema "database: "linesight"
+schema: "main_staging"
+"
+[0m21:27:44.278202 [debug] [ThreadPool]: Using duckdb connection "create_linesight_main_staging"
+[0m21:27:44.278550 [debug] [ThreadPool]: On create_linesight_main_staging: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "connection_name": "create_linesight_main_staging"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='linesight'
+        and type != 'duckdb'
+    
+  
+[0m21:27:44.278800 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:27:44.279770 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m21:27:44.280957 [debug] [ThreadPool]: Using duckdb connection "create_linesight_main_staging"
+[0m21:27:44.281291 [debug] [ThreadPool]: On create_linesight_main_staging: BEGIN
+[0m21:27:44.281748 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:27:44.282001 [debug] [ThreadPool]: Using duckdb connection "create_linesight_main_staging"
+[0m21:27:44.282280 [debug] [ThreadPool]: On create_linesight_main_staging: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "connection_name": "create_linesight_main_staging"} */
+
+    
+    
+        create schema if not exists "linesight"."main_staging"
+    
+[0m21:27:44.282788 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:27:44.283640 [debug] [ThreadPool]: On create_linesight_main_staging: COMMIT
+[0m21:27:44.283925 [debug] [ThreadPool]: Using duckdb connection "create_linesight_main_staging"
+[0m21:27:44.284188 [debug] [ThreadPool]: On create_linesight_main_staging: COMMIT
+[0m21:27:44.285420 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m21:27:44.285748 [debug] [ThreadPool]: On create_linesight_main_staging: Close
+[0m21:27:44.286353 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_linesight_main_staging, now create_linesight_main_marts)
+[0m21:27:44.286726 [debug] [ThreadPool]: Creating schema "database: "linesight"
+schema: "main_marts"
+"
+[0m21:27:44.287883 [debug] [ThreadPool]: Using duckdb connection "create_linesight_main_marts"
+[0m21:27:44.288204 [debug] [ThreadPool]: On create_linesight_main_marts: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "connection_name": "create_linesight_main_marts"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='linesight'
+        and type != 'duckdb'
+    
+  
+[0m21:27:44.288425 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:27:44.289256 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m21:27:44.290395 [debug] [ThreadPool]: Using duckdb connection "create_linesight_main_marts"
+[0m21:27:44.290677 [debug] [ThreadPool]: On create_linesight_main_marts: BEGIN
+[0m21:27:44.291130 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:27:44.291379 [debug] [ThreadPool]: Using duckdb connection "create_linesight_main_marts"
+[0m21:27:44.291644 [debug] [ThreadPool]: On create_linesight_main_marts: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "connection_name": "create_linesight_main_marts"} */
+
+    
+    
+        create schema if not exists "linesight"."main_marts"
+    
+[0m21:27:44.292162 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:27:44.292890 [debug] [ThreadPool]: On create_linesight_main_marts: COMMIT
+[0m21:27:44.293157 [debug] [ThreadPool]: Using duckdb connection "create_linesight_main_marts"
+[0m21:27:44.293360 [debug] [ThreadPool]: On create_linesight_main_marts: COMMIT
+[0m21:27:44.294230 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m21:27:44.294525 [debug] [ThreadPool]: On create_linesight_main_marts: Close
+[0m21:27:44.296016 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_linesight_main_staging'
+[0m21:27:44.300334 [debug] [ThreadPool]: Using duckdb connection "list_linesight_main_staging"
+[0m21:27:44.300713 [debug] [ThreadPool]: On list_linesight_main_staging: BEGIN
+[0m21:27:44.300930 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:27:44.301486 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m21:27:44.301780 [debug] [ThreadPool]: Using duckdb connection "list_linesight_main_staging"
+[0m21:27:44.302012 [debug] [ThreadPool]: On list_linesight_main_staging: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "connection_name": "list_linesight_main_staging"} */
+select
+      'linesight' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main_staging'
+    and lower(table_catalog) = 'linesight'
+  
+[0m21:27:44.305033 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m21:27:44.306181 [debug] [ThreadPool]: On list_linesight_main_staging: ROLLBACK
+[0m21:27:44.306681 [debug] [ThreadPool]: On list_linesight_main_staging: Close
+[0m21:27:44.307238 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_linesight_main_staging, now list_linesight_main_marts)
+[0m21:27:44.308408 [debug] [ThreadPool]: Using duckdb connection "list_linesight_main_marts"
+[0m21:27:44.308690 [debug] [ThreadPool]: On list_linesight_main_marts: BEGIN
+[0m21:27:44.308912 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:27:44.309391 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:27:44.309621 [debug] [ThreadPool]: Using duckdb connection "list_linesight_main_marts"
+[0m21:27:44.309830 [debug] [ThreadPool]: On list_linesight_main_marts: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "connection_name": "list_linesight_main_marts"} */
+select
+      'linesight' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main_marts'
+    and lower(table_catalog) = 'linesight'
+  
+[0m21:27:44.311433 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m21:27:44.312600 [debug] [ThreadPool]: On list_linesight_main_marts: ROLLBACK
+[0m21:27:44.313118 [debug] [ThreadPool]: On list_linesight_main_marts: Close
+[0m21:27:44.313639 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3f8e9830-4ae3-42bf-95d6-2ebb8636acac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc6ee20b1a0>]}
+[0m21:27:44.314026 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:27:44.314330 [debug] [MainThread]: On master: BEGIN
+[0m21:27:44.314528 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:27:44.314996 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:27:44.315267 [debug] [MainThread]: On master: COMMIT
+[0m21:27:44.315463 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:27:44.315720 [debug] [MainThread]: On master: COMMIT
+[0m21:27:44.316131 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:27:44.316390 [debug] [MainThread]: On master: Close
+[0m21:27:44.318749 [debug] [Thread-1 (]: Began running node model.linesight.stg_downtime_events
+[0m21:27:44.319259 [info ] [Thread-1 (]: 1 of 11 START sql view model main_staging.stg_downtime_events .................. [RUN]
+[0m21:27:44.319714 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_linesight_main_marts, now model.linesight.stg_downtime_events)
+[0m21:27:44.320014 [debug] [Thread-1 (]: Began compiling node model.linesight.stg_downtime_events
+[0m21:27:44.325704 [debug] [Thread-1 (]: Writing injected SQL for node "model.linesight.stg_downtime_events"
+[0m21:27:44.326475 [debug] [Thread-1 (]: Began executing node model.linesight.stg_downtime_events
+[0m21:27:44.356422 [debug] [Thread-1 (]: Writing runtime sql for node "model.linesight.stg_downtime_events"
+[0m21:27:44.357169 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.stg_downtime_events"
+[0m21:27:44.357485 [debug] [Thread-1 (]: On model.linesight.stg_downtime_events: BEGIN
+[0m21:27:44.357745 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:27:44.358358 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:27:44.358669 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.stg_downtime_events"
+[0m21:27:44.358941 [debug] [Thread-1 (]: On model.linesight.stg_downtime_events: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "model.linesight.stg_downtime_events"} */
+
+  
+  create view "linesight"."main_staging"."stg_downtime_events__dbt_tmp" as (
+    with source as (
+    select * from "linesight"."raw"."downtime_events"
+),
+
+renamed as (
+    select
+        machine_id,
+        line_id,
+        cast(downtime_start_ts as timestamp) as downtime_start_ts,
+        cast(downtime_hours as double) as downtime_hours,
+        reason
+    from source
+)
+
+select * from renamed
+  );
+
+[0m21:27:44.359833 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:27:44.364689 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.stg_downtime_events"
+[0m21:27:44.365043 [debug] [Thread-1 (]: On model.linesight.stg_downtime_events: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "model.linesight.stg_downtime_events"} */
+alter view "linesight"."main_staging"."stg_downtime_events__dbt_tmp" rename to "stg_downtime_events"
+[0m21:27:44.365697 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:27:44.376760 [debug] [Thread-1 (]: On model.linesight.stg_downtime_events: COMMIT
+[0m21:27:44.377142 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.stg_downtime_events"
+[0m21:27:44.377396 [debug] [Thread-1 (]: On model.linesight.stg_downtime_events: COMMIT
+[0m21:27:44.378416 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:27:44.382786 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.stg_downtime_events"
+[0m21:27:44.383167 [debug] [Thread-1 (]: On model.linesight.stg_downtime_events: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "model.linesight.stg_downtime_events"} */
+
+      drop view if exists "linesight"."main_staging"."stg_downtime_events__dbt_backup" cascade
+    
+[0m21:27:44.383796 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:27:44.385949 [debug] [Thread-1 (]: On model.linesight.stg_downtime_events: Close
+[0m21:27:44.387933 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3f8e9830-4ae3-42bf-95d6-2ebb8636acac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc6ee52efc0>]}
+[0m21:27:44.388646 [info ] [Thread-1 (]: 1 of 11 OK created sql view model main_staging.stg_downtime_events ............. [[32mOK[0m in 0.07s]
+[0m21:27:44.389216 [debug] [Thread-1 (]: Finished running node model.linesight.stg_downtime_events
+[0m21:27:44.389594 [debug] [Thread-1 (]: Began running node model.linesight.stg_machine_daily_oee
+[0m21:27:44.390189 [info ] [Thread-1 (]: 2 of 11 START sql view model main_staging.stg_machine_daily_oee ................ [RUN]
+[0m21:27:44.390641 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.linesight.stg_downtime_events, now model.linesight.stg_machine_daily_oee)
+[0m21:27:44.390926 [debug] [Thread-1 (]: Began compiling node model.linesight.stg_machine_daily_oee
+[0m21:27:44.392778 [debug] [Thread-1 (]: Writing injected SQL for node "model.linesight.stg_machine_daily_oee"
+[0m21:27:44.393303 [debug] [Thread-1 (]: Began executing node model.linesight.stg_machine_daily_oee
+[0m21:27:44.395752 [debug] [Thread-1 (]: Writing runtime sql for node "model.linesight.stg_machine_daily_oee"
+[0m21:27:44.396260 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.stg_machine_daily_oee"
+[0m21:27:44.396546 [debug] [Thread-1 (]: On model.linesight.stg_machine_daily_oee: BEGIN
+[0m21:27:44.396787 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:27:44.397310 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:27:44.397583 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.stg_machine_daily_oee"
+[0m21:27:44.397848 [debug] [Thread-1 (]: On model.linesight.stg_machine_daily_oee: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "model.linesight.stg_machine_daily_oee"} */
+
+  
+  create view "linesight"."main_staging"."stg_machine_daily_oee__dbt_tmp" as (
+    -- Staging over the table synced from Databricks (Delta Sharing or a
+-- scheduled load, see snowflake_sync/schema.sql). This is the exact
+-- bridge point between the two platforms in this hybrid architecture.
+
+with source as (
+    select * from "linesight"."raw"."fct_machine_daily_oee"
+),
+
+renamed as (
+    select
+        machine_id,
+        line_id,
+        cast(production_date as date) as production_date,
+        cast(units_measured as integer) as units_measured,
+        cast(units_in_spec as integer) as units_in_spec,
+        cast(quality_rate as double) as quality_rate,
+        cast(downtime_hours as double) as downtime_hours,
+        cast(planned_hours as double) as planned_hours,
+        cast(availability as double) as availability
+    from source
+)
+
+select * from renamed
+  );
+
+[0m21:27:44.398747 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:27:44.400797 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.stg_machine_daily_oee"
+[0m21:27:44.401153 [debug] [Thread-1 (]: On model.linesight.stg_machine_daily_oee: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "model.linesight.stg_machine_daily_oee"} */
+alter view "linesight"."main_staging"."stg_machine_daily_oee__dbt_tmp" rename to "stg_machine_daily_oee"
+[0m21:27:44.401751 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:27:44.403135 [debug] [Thread-1 (]: On model.linesight.stg_machine_daily_oee: COMMIT
+[0m21:27:44.403511 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.stg_machine_daily_oee"
+[0m21:27:44.403790 [debug] [Thread-1 (]: On model.linesight.stg_machine_daily_oee: COMMIT
+[0m21:27:44.404701 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:27:44.406012 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.stg_machine_daily_oee"
+[0m21:27:44.406334 [debug] [Thread-1 (]: On model.linesight.stg_machine_daily_oee: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "model.linesight.stg_machine_daily_oee"} */
+
+      drop view if exists "linesight"."main_staging"."stg_machine_daily_oee__dbt_backup" cascade
+    
+[0m21:27:44.406868 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:27:44.408163 [debug] [Thread-1 (]: On model.linesight.stg_machine_daily_oee: Close
+[0m21:27:44.408647 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3f8e9830-4ae3-42bf-95d6-2ebb8636acac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc6ed79f620>]}
+[0m21:27:44.409173 [info ] [Thread-1 (]: 2 of 11 OK created sql view model main_staging.stg_machine_daily_oee ........... [[32mOK[0m in 0.02s]
+[0m21:27:44.409627 [debug] [Thread-1 (]: Finished running node model.linesight.stg_machine_daily_oee
+[0m21:27:44.409950 [debug] [Thread-1 (]: Began running node test.linesight.not_null_stg_downtime_events_machine_id.7e687c8210
+[0m21:27:44.410256 [info ] [Thread-1 (]: 3 of 11 START test not_null_stg_downtime_events_machine_id ..................... [RUN]
+[0m21:27:44.410740 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.linesight.stg_machine_daily_oee, now test.linesight.not_null_stg_downtime_events_machine_id.7e687c8210)
+[0m21:27:44.411009 [debug] [Thread-1 (]: Began compiling node test.linesight.not_null_stg_downtime_events_machine_id.7e687c8210
+[0m21:27:44.424028 [debug] [Thread-1 (]: Writing injected SQL for node "test.linesight.not_null_stg_downtime_events_machine_id.7e687c8210"
+[0m21:27:44.424644 [debug] [Thread-1 (]: Began executing node test.linesight.not_null_stg_downtime_events_machine_id.7e687c8210
+[0m21:27:44.441569 [debug] [Thread-1 (]: Writing runtime sql for node "test.linesight.not_null_stg_downtime_events_machine_id.7e687c8210"
+[0m21:27:44.442238 [debug] [Thread-1 (]: Using duckdb connection "test.linesight.not_null_stg_downtime_events_machine_id.7e687c8210"
+[0m21:27:44.442535 [debug] [Thread-1 (]: On test.linesight.not_null_stg_downtime_events_machine_id.7e687c8210: BEGIN
+[0m21:27:44.442785 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:27:44.443339 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:27:44.443705 [debug] [Thread-1 (]: Using duckdb connection "test.linesight.not_null_stg_downtime_events_machine_id.7e687c8210"
+[0m21:27:44.443966 [debug] [Thread-1 (]: On test.linesight.not_null_stg_downtime_events_machine_id.7e687c8210: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "test.linesight.not_null_stg_downtime_events_machine_id.7e687c8210"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select machine_id
+from "linesight"."main_staging"."stg_downtime_events"
+where machine_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:27:44.445152 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:27:44.448502 [debug] [Thread-1 (]: On test.linesight.not_null_stg_downtime_events_machine_id.7e687c8210: ROLLBACK
+[0m21:27:44.449102 [debug] [Thread-1 (]: On test.linesight.not_null_stg_downtime_events_machine_id.7e687c8210: Close
+[0m21:27:44.449664 [info ] [Thread-1 (]: 3 of 11 PASS not_null_stg_downtime_events_machine_id ........................... [[32mPASS[0m in 0.04s]
+[0m21:27:44.450167 [debug] [Thread-1 (]: Finished running node test.linesight.not_null_stg_downtime_events_machine_id.7e687c8210
+[0m21:27:44.450469 [debug] [Thread-1 (]: Began running node test.linesight.not_null_stg_machine_daily_oee_availability.0096d7724e
+[0m21:27:44.450852 [info ] [Thread-1 (]: 4 of 11 START test not_null_stg_machine_daily_oee_availability ................. [RUN]
+[0m21:27:44.451238 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.linesight.not_null_stg_downtime_events_machine_id.7e687c8210, now test.linesight.not_null_stg_machine_daily_oee_availability.0096d7724e)
+[0m21:27:44.451539 [debug] [Thread-1 (]: Began compiling node test.linesight.not_null_stg_machine_daily_oee_availability.0096d7724e
+[0m21:27:44.457357 [debug] [Thread-1 (]: Writing injected SQL for node "test.linesight.not_null_stg_machine_daily_oee_availability.0096d7724e"
+[0m21:27:44.457855 [debug] [Thread-1 (]: Began executing node test.linesight.not_null_stg_machine_daily_oee_availability.0096d7724e
+[0m21:27:44.459297 [debug] [Thread-1 (]: Writing runtime sql for node "test.linesight.not_null_stg_machine_daily_oee_availability.0096d7724e"
+[0m21:27:44.459816 [debug] [Thread-1 (]: Using duckdb connection "test.linesight.not_null_stg_machine_daily_oee_availability.0096d7724e"
+[0m21:27:44.460147 [debug] [Thread-1 (]: On test.linesight.not_null_stg_machine_daily_oee_availability.0096d7724e: BEGIN
+[0m21:27:44.460417 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:27:44.460930 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:27:44.461229 [debug] [Thread-1 (]: Using duckdb connection "test.linesight.not_null_stg_machine_daily_oee_availability.0096d7724e"
+[0m21:27:44.461477 [debug] [Thread-1 (]: On test.linesight.not_null_stg_machine_daily_oee_availability.0096d7724e: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "test.linesight.not_null_stg_machine_daily_oee_availability.0096d7724e"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select availability
+from "linesight"."main_staging"."stg_machine_daily_oee"
+where availability is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:27:44.462596 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:27:44.464077 [debug] [Thread-1 (]: On test.linesight.not_null_stg_machine_daily_oee_availability.0096d7724e: ROLLBACK
+[0m21:27:44.464678 [debug] [Thread-1 (]: On test.linesight.not_null_stg_machine_daily_oee_availability.0096d7724e: Close
+[0m21:27:44.465284 [info ] [Thread-1 (]: 4 of 11 PASS not_null_stg_machine_daily_oee_availability ....................... [[32mPASS[0m in 0.01s]
+[0m21:27:44.465777 [debug] [Thread-1 (]: Finished running node test.linesight.not_null_stg_machine_daily_oee_availability.0096d7724e
+[0m21:27:44.466114 [debug] [Thread-1 (]: Began running node test.linesight.not_null_stg_machine_daily_oee_machine_id.56c2bc9790
+[0m21:27:44.466400 [info ] [Thread-1 (]: 5 of 11 START test not_null_stg_machine_daily_oee_machine_id ................... [RUN]
+[0m21:27:44.466792 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.linesight.not_null_stg_machine_daily_oee_availability.0096d7724e, now test.linesight.not_null_stg_machine_daily_oee_machine_id.56c2bc9790)
+[0m21:27:44.467045 [debug] [Thread-1 (]: Began compiling node test.linesight.not_null_stg_machine_daily_oee_machine_id.56c2bc9790
+[0m21:27:44.472709 [debug] [Thread-1 (]: Writing injected SQL for node "test.linesight.not_null_stg_machine_daily_oee_machine_id.56c2bc9790"
+[0m21:27:44.473193 [debug] [Thread-1 (]: Began executing node test.linesight.not_null_stg_machine_daily_oee_machine_id.56c2bc9790
+[0m21:27:44.474617 [debug] [Thread-1 (]: Writing runtime sql for node "test.linesight.not_null_stg_machine_daily_oee_machine_id.56c2bc9790"
+[0m21:27:44.475142 [debug] [Thread-1 (]: Using duckdb connection "test.linesight.not_null_stg_machine_daily_oee_machine_id.56c2bc9790"
+[0m21:27:44.475449 [debug] [Thread-1 (]: On test.linesight.not_null_stg_machine_daily_oee_machine_id.56c2bc9790: BEGIN
+[0m21:27:44.475750 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:27:44.476311 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:27:44.476588 [debug] [Thread-1 (]: Using duckdb connection "test.linesight.not_null_stg_machine_daily_oee_machine_id.56c2bc9790"
+[0m21:27:44.476837 [debug] [Thread-1 (]: On test.linesight.not_null_stg_machine_daily_oee_machine_id.56c2bc9790: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "test.linesight.not_null_stg_machine_daily_oee_machine_id.56c2bc9790"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select machine_id
+from "linesight"."main_staging"."stg_machine_daily_oee"
+where machine_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:27:44.477902 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:27:44.479226 [debug] [Thread-1 (]: On test.linesight.not_null_stg_machine_daily_oee_machine_id.56c2bc9790: ROLLBACK
+[0m21:27:44.479773 [debug] [Thread-1 (]: On test.linesight.not_null_stg_machine_daily_oee_machine_id.56c2bc9790: Close
+[0m21:27:44.480308 [info ] [Thread-1 (]: 5 of 11 PASS not_null_stg_machine_daily_oee_machine_id ......................... [[32mPASS[0m in 0.01s]
+[0m21:27:44.480734 [debug] [Thread-1 (]: Finished running node test.linesight.not_null_stg_machine_daily_oee_machine_id.56c2bc9790
+[0m21:27:44.481035 [debug] [Thread-1 (]: Began running node model.linesight.fct_downtime_pareto
+[0m21:27:44.481512 [info ] [Thread-1 (]: 6 of 11 START sql table model main_marts.fct_downtime_pareto ................... [RUN]
+[0m21:27:44.481866 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.linesight.not_null_stg_machine_daily_oee_machine_id.56c2bc9790, now model.linesight.fct_downtime_pareto)
+[0m21:27:44.482145 [debug] [Thread-1 (]: Began compiling node model.linesight.fct_downtime_pareto
+[0m21:27:44.483853 [debug] [Thread-1 (]: Writing injected SQL for node "model.linesight.fct_downtime_pareto"
+[0m21:27:44.484364 [debug] [Thread-1 (]: Began executing node model.linesight.fct_downtime_pareto
+[0m21:27:44.518933 [debug] [Thread-1 (]: Writing runtime sql for node "model.linesight.fct_downtime_pareto"
+[0m21:27:44.519562 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.fct_downtime_pareto"
+[0m21:27:44.519865 [debug] [Thread-1 (]: On model.linesight.fct_downtime_pareto: BEGIN
+[0m21:27:44.520135 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:27:44.520662 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:27:44.520937 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.fct_downtime_pareto"
+[0m21:27:44.521220 [debug] [Thread-1 (]: On model.linesight.fct_downtime_pareto: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "model.linesight.fct_downtime_pareto"} */
+
+    
+
+    create  table
+      "linesight"."main_marts"."fct_downtime_pareto__dbt_tmp"
+  
+    
+    as (
+      -- CERTIFIED. Downtime-reason Pareto, the actionable list a plant
+-- manager works from to prioritize improvement projects.
+
+
+
+with by_reason as (
+    select
+        reason,
+        count(*) as event_count,
+        round(sum(downtime_hours), 2) as total_downtime_hours
+    from "linesight"."main_staging"."stg_downtime_events"
+    group by reason
+)
+
+select
+    reason,
+    event_count,
+    total_downtime_hours,
+    round(total_downtime_hours * 1.0 / sum(total_downtime_hours) over (), 4) as pct_of_total_downtime
+from by_reason
+order by total_downtime_hours desc
+    );
+    
+  
+[0m21:27:44.525051 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m21:27:44.526981 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.fct_downtime_pareto"
+[0m21:27:44.527626 [debug] [Thread-1 (]: On model.linesight.fct_downtime_pareto: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "model.linesight.fct_downtime_pareto"} */
+alter table "linesight"."main_marts"."fct_downtime_pareto__dbt_tmp" rename to "fct_downtime_pareto"
+[0m21:27:44.528373 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:27:44.533285 [debug] [Thread-1 (]: On model.linesight.fct_downtime_pareto: COMMIT
+[0m21:27:44.533611 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.fct_downtime_pareto"
+[0m21:27:44.533868 [debug] [Thread-1 (]: On model.linesight.fct_downtime_pareto: COMMIT
+[0m21:27:44.534948 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:27:44.536364 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.fct_downtime_pareto"
+[0m21:27:44.536655 [debug] [Thread-1 (]: On model.linesight.fct_downtime_pareto: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "model.linesight.fct_downtime_pareto"} */
+
+      drop table if exists "linesight"."main_marts"."fct_downtime_pareto__dbt_backup" cascade
+    
+[0m21:27:44.537219 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:27:44.538454 [debug] [Thread-1 (]: On model.linesight.fct_downtime_pareto: Close
+[0m21:27:44.538928 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3f8e9830-4ae3-42bf-95d6-2ebb8636acac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc6ed7b6f00>]}
+[0m21:27:44.539529 [info ] [Thread-1 (]: 6 of 11 OK created sql table model main_marts.fct_downtime_pareto .............. [[32mOK[0m in 0.06s]
+[0m21:27:44.540006 [debug] [Thread-1 (]: Finished running node model.linesight.fct_downtime_pareto
+[0m21:27:44.540369 [debug] [Thread-1 (]: Began running node model.linesight.fct_line_oee
+[0m21:27:44.540848 [info ] [Thread-1 (]: 7 of 11 START sql table model main_marts.fct_line_oee .......................... [RUN]
+[0m21:27:44.541237 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.linesight.fct_downtime_pareto, now model.linesight.fct_line_oee)
+[0m21:27:44.541512 [debug] [Thread-1 (]: Began compiling node model.linesight.fct_line_oee
+[0m21:27:44.543238 [debug] [Thread-1 (]: Writing injected SQL for node "model.linesight.fct_line_oee"
+[0m21:27:44.543706 [debug] [Thread-1 (]: Began executing node model.linesight.fct_line_oee
+[0m21:27:44.546388 [debug] [Thread-1 (]: Writing runtime sql for node "model.linesight.fct_line_oee"
+[0m21:27:44.546930 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.fct_line_oee"
+[0m21:27:44.547265 [debug] [Thread-1 (]: On model.linesight.fct_line_oee: BEGIN
+[0m21:27:44.547551 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:27:44.548042 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:27:44.548353 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.fct_line_oee"
+[0m21:27:44.548600 [debug] [Thread-1 (]: On model.linesight.fct_line_oee: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "model.linesight.fct_line_oee"} */
+
+    
+
+    create  table
+      "linesight"."main_marts"."fct_line_oee__dbt_tmp"
+  
+    
+    as (
+      -- CERTIFIED. OEE = availability x performance x quality. Performance
+-- assumed 1.0 (no throughput-target data in this dataset); a real
+-- deployment joins a target-rate table for the performance component.
+
+
+
+select
+    line_id,
+    production_date,
+    round(avg(availability), 4) as availability,
+    round(avg(quality_rate), 4) as quality_rate,
+    1.0 as performance_assumed,
+    round(avg(availability) * avg(quality_rate) * 1.0, 4) as oee
+from "linesight"."main_staging"."stg_machine_daily_oee"
+group by line_id, production_date
+    );
+    
+  
+[0m21:27:44.551976 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m21:27:44.554020 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.fct_line_oee"
+[0m21:27:44.554419 [debug] [Thread-1 (]: On model.linesight.fct_line_oee: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "model.linesight.fct_line_oee"} */
+alter table "linesight"."main_marts"."fct_line_oee__dbt_tmp" rename to "fct_line_oee"
+[0m21:27:44.555279 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:27:44.556751 [debug] [Thread-1 (]: On model.linesight.fct_line_oee: COMMIT
+[0m21:27:44.557106 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.fct_line_oee"
+[0m21:27:44.557415 [debug] [Thread-1 (]: On model.linesight.fct_line_oee: COMMIT
+[0m21:27:44.558593 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:27:44.559972 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.fct_line_oee"
+[0m21:27:44.560338 [debug] [Thread-1 (]: On model.linesight.fct_line_oee: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "model.linesight.fct_line_oee"} */
+
+      drop table if exists "linesight"."main_marts"."fct_line_oee__dbt_backup" cascade
+    
+[0m21:27:44.560912 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:27:44.562135 [debug] [Thread-1 (]: On model.linesight.fct_line_oee: Close
+[0m21:27:44.562605 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3f8e9830-4ae3-42bf-95d6-2ebb8636acac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc6ed7b6cc0>]}
+[0m21:27:44.563146 [info ] [Thread-1 (]: 7 of 11 OK created sql table model main_marts.fct_line_oee ..................... [[32mOK[0m in 0.02s]
+[0m21:27:44.563676 [debug] [Thread-1 (]: Finished running node model.linesight.fct_line_oee
+[0m21:27:44.564034 [debug] [Thread-1 (]: Began running node test.linesight.not_null_fct_downtime_pareto_reason.d72c871ce2
+[0m21:27:44.564506 [info ] [Thread-1 (]: 8 of 11 START test not_null_fct_downtime_pareto_reason ......................... [RUN]
+[0m21:27:44.564866 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.linesight.fct_line_oee, now test.linesight.not_null_fct_downtime_pareto_reason.d72c871ce2)
+[0m21:27:44.565227 [debug] [Thread-1 (]: Began compiling node test.linesight.not_null_fct_downtime_pareto_reason.d72c871ce2
+[0m21:27:44.570985 [debug] [Thread-1 (]: Writing injected SQL for node "test.linesight.not_null_fct_downtime_pareto_reason.d72c871ce2"
+[0m21:27:44.571540 [debug] [Thread-1 (]: Began executing node test.linesight.not_null_fct_downtime_pareto_reason.d72c871ce2
+[0m21:27:44.572902 [debug] [Thread-1 (]: Writing runtime sql for node "test.linesight.not_null_fct_downtime_pareto_reason.d72c871ce2"
+[0m21:27:44.573413 [debug] [Thread-1 (]: Using duckdb connection "test.linesight.not_null_fct_downtime_pareto_reason.d72c871ce2"
+[0m21:27:44.573681 [debug] [Thread-1 (]: On test.linesight.not_null_fct_downtime_pareto_reason.d72c871ce2: BEGIN
+[0m21:27:44.573926 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:27:44.574463 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:27:44.574756 [debug] [Thread-1 (]: Using duckdb connection "test.linesight.not_null_fct_downtime_pareto_reason.d72c871ce2"
+[0m21:27:44.575028 [debug] [Thread-1 (]: On test.linesight.not_null_fct_downtime_pareto_reason.d72c871ce2: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "test.linesight.not_null_fct_downtime_pareto_reason.d72c871ce2"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select reason
+from "linesight"."main_marts"."fct_downtime_pareto"
+where reason is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:27:44.575961 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:27:44.577373 [debug] [Thread-1 (]: On test.linesight.not_null_fct_downtime_pareto_reason.d72c871ce2: ROLLBACK
+[0m21:27:44.577929 [debug] [Thread-1 (]: On test.linesight.not_null_fct_downtime_pareto_reason.d72c871ce2: Close
+[0m21:27:44.578515 [info ] [Thread-1 (]: 8 of 11 PASS not_null_fct_downtime_pareto_reason ............................... [[32mPASS[0m in 0.01s]
+[0m21:27:44.578976 [debug] [Thread-1 (]: Finished running node test.linesight.not_null_fct_downtime_pareto_reason.d72c871ce2
+[0m21:27:44.579309 [debug] [Thread-1 (]: Began running node test.linesight.unique_fct_downtime_pareto_reason.f60e42875a
+[0m21:27:44.579639 [info ] [Thread-1 (]: 9 of 11 START test unique_fct_downtime_pareto_reason ........................... [RUN]
+[0m21:27:44.579987 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.linesight.not_null_fct_downtime_pareto_reason.d72c871ce2, now test.linesight.unique_fct_downtime_pareto_reason.f60e42875a)
+[0m21:27:44.580297 [debug] [Thread-1 (]: Began compiling node test.linesight.unique_fct_downtime_pareto_reason.f60e42875a
+[0m21:27:44.588082 [debug] [Thread-1 (]: Writing injected SQL for node "test.linesight.unique_fct_downtime_pareto_reason.f60e42875a"
+[0m21:27:44.588538 [debug] [Thread-1 (]: Began executing node test.linesight.unique_fct_downtime_pareto_reason.f60e42875a
+[0m21:27:44.589874 [debug] [Thread-1 (]: Writing runtime sql for node "test.linesight.unique_fct_downtime_pareto_reason.f60e42875a"
+[0m21:27:44.590336 [debug] [Thread-1 (]: Using duckdb connection "test.linesight.unique_fct_downtime_pareto_reason.f60e42875a"
+[0m21:27:44.590598 [debug] [Thread-1 (]: On test.linesight.unique_fct_downtime_pareto_reason.f60e42875a: BEGIN
+[0m21:27:44.590830 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:27:44.591339 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:27:44.591641 [debug] [Thread-1 (]: Using duckdb connection "test.linesight.unique_fct_downtime_pareto_reason.f60e42875a"
+[0m21:27:44.591887 [debug] [Thread-1 (]: On test.linesight.unique_fct_downtime_pareto_reason.f60e42875a: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "test.linesight.unique_fct_downtime_pareto_reason.f60e42875a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    reason as unique_field,
+    count(*) as n_records
+
+from "linesight"."main_marts"."fct_downtime_pareto"
+where reason is not null
+group by reason
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:27:44.593231 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:27:44.594565 [debug] [Thread-1 (]: On test.linesight.unique_fct_downtime_pareto_reason.f60e42875a: ROLLBACK
+[0m21:27:44.595128 [debug] [Thread-1 (]: On test.linesight.unique_fct_downtime_pareto_reason.f60e42875a: Close
+[0m21:27:44.595679 [info ] [Thread-1 (]: 9 of 11 PASS unique_fct_downtime_pareto_reason ................................. [[32mPASS[0m in 0.02s]
+[0m21:27:44.596190 [debug] [Thread-1 (]: Finished running node test.linesight.unique_fct_downtime_pareto_reason.f60e42875a
+[0m21:27:44.596495 [debug] [Thread-1 (]: Began running node test.linesight.not_null_fct_line_oee_line_id.652f94574a
+[0m21:27:44.596790 [info ] [Thread-1 (]: 10 of 11 START test not_null_fct_line_oee_line_id .............................. [RUN]
+[0m21:27:44.597159 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.linesight.unique_fct_downtime_pareto_reason.f60e42875a, now test.linesight.not_null_fct_line_oee_line_id.652f94574a)
+[0m21:27:44.597407 [debug] [Thread-1 (]: Began compiling node test.linesight.not_null_fct_line_oee_line_id.652f94574a
+[0m21:27:44.603024 [debug] [Thread-1 (]: Writing injected SQL for node "test.linesight.not_null_fct_line_oee_line_id.652f94574a"
+[0m21:27:44.603588 [debug] [Thread-1 (]: Began executing node test.linesight.not_null_fct_line_oee_line_id.652f94574a
+[0m21:27:44.604970 [debug] [Thread-1 (]: Writing runtime sql for node "test.linesight.not_null_fct_line_oee_line_id.652f94574a"
+[0m21:27:44.605439 [debug] [Thread-1 (]: Using duckdb connection "test.linesight.not_null_fct_line_oee_line_id.652f94574a"
+[0m21:27:44.605709 [debug] [Thread-1 (]: On test.linesight.not_null_fct_line_oee_line_id.652f94574a: BEGIN
+[0m21:27:44.605954 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:27:44.606469 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:27:44.606726 [debug] [Thread-1 (]: Using duckdb connection "test.linesight.not_null_fct_line_oee_line_id.652f94574a"
+[0m21:27:44.606975 [debug] [Thread-1 (]: On test.linesight.not_null_fct_line_oee_line_id.652f94574a: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "test.linesight.not_null_fct_line_oee_line_id.652f94574a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select line_id
+from "linesight"."main_marts"."fct_line_oee"
+where line_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:27:44.607861 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:27:44.609323 [debug] [Thread-1 (]: On test.linesight.not_null_fct_line_oee_line_id.652f94574a: ROLLBACK
+[0m21:27:44.609852 [debug] [Thread-1 (]: On test.linesight.not_null_fct_line_oee_line_id.652f94574a: Close
+[0m21:27:44.610388 [info ] [Thread-1 (]: 10 of 11 PASS not_null_fct_line_oee_line_id .................................... [[32mPASS[0m in 0.01s]
+[0m21:27:44.610843 [debug] [Thread-1 (]: Finished running node test.linesight.not_null_fct_line_oee_line_id.652f94574a
+[0m21:27:44.611183 [debug] [Thread-1 (]: Began running node test.linesight.not_null_fct_line_oee_oee.5b6c0e23d6
+[0m21:27:44.611511 [info ] [Thread-1 (]: 11 of 11 START test not_null_fct_line_oee_oee .................................. [RUN]
+[0m21:27:44.611865 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.linesight.not_null_fct_line_oee_line_id.652f94574a, now test.linesight.not_null_fct_line_oee_oee.5b6c0e23d6)
+[0m21:27:44.612138 [debug] [Thread-1 (]: Began compiling node test.linesight.not_null_fct_line_oee_oee.5b6c0e23d6
+[0m21:27:44.617503 [debug] [Thread-1 (]: Writing injected SQL for node "test.linesight.not_null_fct_line_oee_oee.5b6c0e23d6"
+[0m21:27:44.617949 [debug] [Thread-1 (]: Began executing node test.linesight.not_null_fct_line_oee_oee.5b6c0e23d6
+[0m21:27:44.619365 [debug] [Thread-1 (]: Writing runtime sql for node "test.linesight.not_null_fct_line_oee_oee.5b6c0e23d6"
+[0m21:27:44.619912 [debug] [Thread-1 (]: Using duckdb connection "test.linesight.not_null_fct_line_oee_oee.5b6c0e23d6"
+[0m21:27:44.620244 [debug] [Thread-1 (]: On test.linesight.not_null_fct_line_oee_oee.5b6c0e23d6: BEGIN
+[0m21:27:44.620483 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:27:44.620978 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:27:44.621283 [debug] [Thread-1 (]: Using duckdb connection "test.linesight.not_null_fct_line_oee_oee.5b6c0e23d6"
+[0m21:27:44.621526 [debug] [Thread-1 (]: On test.linesight.not_null_fct_line_oee_oee.5b6c0e23d6: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "test.linesight.not_null_fct_line_oee_oee.5b6c0e23d6"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select oee
+from "linesight"."main_marts"."fct_line_oee"
+where oee is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:27:44.622355 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:27:44.623699 [debug] [Thread-1 (]: On test.linesight.not_null_fct_line_oee_oee.5b6c0e23d6: ROLLBACK
+[0m21:27:44.624292 [debug] [Thread-1 (]: On test.linesight.not_null_fct_line_oee_oee.5b6c0e23d6: Close
+[0m21:27:44.624824 [info ] [Thread-1 (]: 11 of 11 PASS not_null_fct_line_oee_oee ........................................ [[32mPASS[0m in 0.01s]
+[0m21:27:44.625296 [debug] [Thread-1 (]: Finished running node test.linesight.not_null_fct_line_oee_oee.5b6c0e23d6
+[0m21:27:44.626798 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:27:44.627130 [debug] [MainThread]: On master: BEGIN
+[0m21:27:44.627352 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:27:44.627903 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m21:27:44.628217 [debug] [MainThread]: On master: COMMIT
+[0m21:27:44.628438 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:27:44.628630 [debug] [MainThread]: On master: COMMIT
+[0m21:27:44.628989 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:27:44.629244 [debug] [MainThread]: On master: Close
+[0m21:27:44.629556 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:27:44.629740 [debug] [MainThread]: Connection 'create_linesight_main_marts' was properly closed.
+[0m21:27:44.629942 [debug] [MainThread]: Connection 'test.linesight.not_null_fct_line_oee_oee.5b6c0e23d6' was properly closed.
+[0m21:27:44.630245 [info ] [MainThread]: 
+[0m21:27:44.630541 [info ] [MainThread]: Finished running 2 table models, 7 data tests, 2 view models in 0 hours 0 minutes and 0.54 seconds (0.54s).
+[0m21:27:44.632135 [debug] [MainThread]: Command end result
+[0m21:27:44.660481 [debug] [MainThread]: Wrote artifact WritableManifest to /home/claude/linesight/dbt/target/manifest.json
+[0m21:27:44.662881 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/claude/linesight/dbt/target/semantic_manifest.json
+[0m21:27:44.665281 [debug] [MainThread]: Wrote artifact OsiDocument to /home/claude/linesight/dbt/target/osi_document.json
+[0m21:27:44.671838 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/claude/linesight/dbt/target/run_results.json
+[0m21:27:44.672159 [info ] [MainThread]: 
+[0m21:27:44.672472 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:27:44.672708 [info ] [MainThread]: 
+[0m21:27:44.672976 [info ] [MainThread]: Done. PASS=11 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=11
+[0m21:27:44.673792 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 3.2904506, "process_in_blocks": "48408", "process_kernel_time": 0.301997, "process_mem_max_rss": "190308", "process_out_blocks": "4296", "process_user_time": 4.389249}
+[0m21:27:44.674262 [debug] [MainThread]: Command `dbt build` succeeded at 21:27:44.674173 after 3.29 seconds
+[0m21:27:44.674540 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc6f4264d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc6ee6dcd70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc6f429e0c0>]}
+[0m21:27:44.674835 [debug] [MainThread]: Flushing usage events
+[0m21:27:44.794721 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:30:01.645061 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fce38728e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fce375ca7b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fce379b1130>]}
+
+
+============================== 21:30:01.648131 | 47ce5fd8-266e-4673-a115-1cf6dba27cb3 ==============================
+[0m21:30:01.648131 [info ] [MainThread]: Running with dbt=1.12.3
+[0m21:30:01.648681 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'target_path': 'None', 'log_format': 'default', 'partial_parse': 'True', 'hints_enabled': 'True', 'profiles_dir': '.', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True', 'quiet': 'False', 'no_print': 'None', 'introspect': 'True', 'use_experimental_parser': 'False', 'version_check': 'True', 'debug': 'False', 'printer_width': '80', 'indirect_selection': 'eager', 'log_path': '/home/claude/linesight/dbt/logs', 'empty': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'maximum_seed_size_mib': '1', 'invocation_command': 'dbt build', 'use_colors': 'True', 'static_parser': 'True'}
+[0m21:30:01.928201 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '47ce5fd8-266e-4673-a115-1cf6dba27cb3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fce39c5e420>]}
+[0m21:30:02.019249 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '47ce5fd8-266e-4673-a115-1cf6dba27cb3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fce367d9cd0>]}
+[0m21:30:02.021167 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m21:30:02.103372 [debug] [MainThread]: checksum: 1123a4b5193207071531f548736a92afb735feab380f6fa4cd3418f3dbbd45ec, vars: {}, profile: linesight, target: dev, version: 1.12.3
+[0m21:30:02.277736 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:30:02.278060 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m21:30:02.278303 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:30:02.287930 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '47ce5fd8-266e-4673-a115-1cf6dba27cb3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fce32033950>]}
+[0m21:30:02.418821 [debug] [MainThread]: Wrote artifact WritableManifest to /home/claude/linesight/dbt/target/manifest.json
+[0m21:30:02.421125 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/claude/linesight/dbt/target/semantic_manifest.json
+[0m21:30:02.432518 [debug] [MainThread]: Wrote artifact OsiDocument to /home/claude/linesight/dbt/target/osi_document.json
+[0m21:30:02.450998 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '47ce5fd8-266e-4673-a115-1cf6dba27cb3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fce31cbcc20>]}
+[0m21:30:02.451423 [info ] [MainThread]: Found 4 models, 7 data tests, 4 sources, 500 macros
+[0m21:30:02.453670 [info ] [MainThread]: 
+[0m21:30:02.453997 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:30:02.454273 [info ] [MainThread]: 
+[0m21:30:02.454675 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m21:30:02.459414 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_linesight'
+[0m21:30:02.490873 [debug] [ThreadPool]: Using duckdb connection "list_linesight"
+[0m21:30:02.491218 [debug] [ThreadPool]: On list_linesight: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "connection_name": "list_linesight"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"linesight"'
+    
+  
+  
+[0m21:30:02.491522 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:30:02.512971 [debug] [ThreadPool]: SQL status: OK in 0.021 seconds
+[0m21:30:02.514270 [debug] [ThreadPool]: On list_linesight: Close
+[0m21:30:02.515697 [debug] [ThreadPool]: Using duckdb connection "list_linesight"
+[0m21:30:02.515997 [debug] [ThreadPool]: On list_linesight: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "connection_name": "list_linesight"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"linesight"'
+    
+  
+  
+[0m21:30:02.516249 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:30:02.517409 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m21:30:02.518626 [debug] [ThreadPool]: On list_linesight: Close
+[0m21:30:02.519409 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_linesight, now create_linesight_main_marts)
+[0m21:30:02.519853 [debug] [ThreadPool]: Creating schema "database: "linesight"
+schema: "main_marts"
+"
+[0m21:30:02.527159 [debug] [ThreadPool]: Using duckdb connection "create_linesight_main_marts"
+[0m21:30:02.527507 [debug] [ThreadPool]: On create_linesight_main_marts: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "connection_name": "create_linesight_main_marts"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='linesight'
+        and type != 'duckdb'
+    
+  
+[0m21:30:02.527753 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:30:02.528801 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m21:30:02.530011 [debug] [ThreadPool]: Using duckdb connection "create_linesight_main_marts"
+[0m21:30:02.530331 [debug] [ThreadPool]: On create_linesight_main_marts: BEGIN
+[0m21:30:02.530780 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:30:02.531028 [debug] [ThreadPool]: Using duckdb connection "create_linesight_main_marts"
+[0m21:30:02.531288 [debug] [ThreadPool]: On create_linesight_main_marts: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "connection_name": "create_linesight_main_marts"} */
+
+    
+    
+        create schema if not exists "linesight"."main_marts"
+    
+[0m21:30:02.531842 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:30:02.532655 [debug] [ThreadPool]: On create_linesight_main_marts: COMMIT
+[0m21:30:02.532941 [debug] [ThreadPool]: Using duckdb connection "create_linesight_main_marts"
+[0m21:30:02.533195 [debug] [ThreadPool]: On create_linesight_main_marts: COMMIT
+[0m21:30:02.533597 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:30:02.533838 [debug] [ThreadPool]: On create_linesight_main_marts: Close
+[0m21:30:02.534414 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_linesight_main_marts, now create_linesight_main_staging)
+[0m21:30:02.534790 [debug] [ThreadPool]: Creating schema "database: "linesight"
+schema: "main_staging"
+"
+[0m21:30:02.535980 [debug] [ThreadPool]: Using duckdb connection "create_linesight_main_staging"
+[0m21:30:02.536339 [debug] [ThreadPool]: On create_linesight_main_staging: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "connection_name": "create_linesight_main_staging"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='linesight'
+        and type != 'duckdb'
+    
+  
+[0m21:30:02.536582 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:30:02.537473 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m21:30:02.538694 [debug] [ThreadPool]: Using duckdb connection "create_linesight_main_staging"
+[0m21:30:02.539138 [debug] [ThreadPool]: On create_linesight_main_staging: BEGIN
+[0m21:30:02.539600 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:30:02.539851 [debug] [ThreadPool]: Using duckdb connection "create_linesight_main_staging"
+[0m21:30:02.540059 [debug] [ThreadPool]: On create_linesight_main_staging: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "connection_name": "create_linesight_main_staging"} */
+
+    
+    
+        create schema if not exists "linesight"."main_staging"
+    
+[0m21:30:02.540525 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:30:02.541281 [debug] [ThreadPool]: On create_linesight_main_staging: COMMIT
+[0m21:30:02.541541 [debug] [ThreadPool]: Using duckdb connection "create_linesight_main_staging"
+[0m21:30:02.541756 [debug] [ThreadPool]: On create_linesight_main_staging: COMMIT
+[0m21:30:02.542208 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:30:02.542466 [debug] [ThreadPool]: On create_linesight_main_staging: Close
+[0m21:30:02.543736 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_linesight_main_marts'
+[0m21:30:02.548267 [debug] [ThreadPool]: Using duckdb connection "list_linesight_main_marts"
+[0m21:30:02.548740 [debug] [ThreadPool]: On list_linesight_main_marts: BEGIN
+[0m21:30:02.549001 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:30:02.549617 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m21:30:02.549885 [debug] [ThreadPool]: Using duckdb connection "list_linesight_main_marts"
+[0m21:30:02.550143 [debug] [ThreadPool]: On list_linesight_main_marts: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "connection_name": "list_linesight_main_marts"} */
+select
+      'linesight' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main_marts'
+    and lower(table_catalog) = 'linesight'
+  
+[0m21:30:02.554508 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m21:30:02.555933 [debug] [ThreadPool]: On list_linesight_main_marts: ROLLBACK
+[0m21:30:02.556491 [debug] [ThreadPool]: On list_linesight_main_marts: Close
+[0m21:30:02.557428 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_linesight_main_marts, now list_linesight_main_staging)
+[0m21:30:02.558571 [debug] [ThreadPool]: Using duckdb connection "list_linesight_main_staging"
+[0m21:30:02.558853 [debug] [ThreadPool]: On list_linesight_main_staging: BEGIN
+[0m21:30:02.559200 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:30:02.559688 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m21:30:02.559939 [debug] [ThreadPool]: Using duckdb connection "list_linesight_main_staging"
+[0m21:30:02.560177 [debug] [ThreadPool]: On list_linesight_main_staging: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "connection_name": "list_linesight_main_staging"} */
+select
+      'linesight' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main_staging'
+    and lower(table_catalog) = 'linesight'
+  
+[0m21:30:02.562066 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m21:30:02.563250 [debug] [ThreadPool]: On list_linesight_main_staging: ROLLBACK
+[0m21:30:02.563818 [debug] [ThreadPool]: On list_linesight_main_staging: Close
+[0m21:30:02.564658 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '47ce5fd8-266e-4673-a115-1cf6dba27cb3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fce31106240>]}
+[0m21:30:02.565023 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:30:02.565284 [debug] [MainThread]: On master: BEGIN
+[0m21:30:02.565479 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:30:02.565934 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:30:02.566240 [debug] [MainThread]: On master: COMMIT
+[0m21:30:02.566454 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:30:02.566648 [debug] [MainThread]: On master: COMMIT
+[0m21:30:02.567008 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:30:02.567262 [debug] [MainThread]: On master: Close
+[0m21:30:02.568991 [debug] [Thread-1 (]: Began running node model.linesight.stg_downtime_events
+[0m21:30:02.569502 [info ] [Thread-1 (]: 1 of 11 START sql view model main_staging.stg_downtime_events .................. [RUN]
+[0m21:30:02.569941 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly create_linesight_main_staging, now model.linesight.stg_downtime_events)
+[0m21:30:02.570251 [debug] [Thread-1 (]: Began compiling node model.linesight.stg_downtime_events
+[0m21:30:02.576600 [debug] [Thread-1 (]: Writing injected SQL for node "model.linesight.stg_downtime_events"
+[0m21:30:02.577200 [debug] [Thread-1 (]: Began executing node model.linesight.stg_downtime_events
+[0m21:30:02.607881 [debug] [Thread-1 (]: Writing runtime sql for node "model.linesight.stg_downtime_events"
+[0m21:30:02.608518 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.stg_downtime_events"
+[0m21:30:02.608937 [debug] [Thread-1 (]: On model.linesight.stg_downtime_events: BEGIN
+[0m21:30:02.609295 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:30:02.609875 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:02.610240 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.stg_downtime_events"
+[0m21:30:02.610520 [debug] [Thread-1 (]: On model.linesight.stg_downtime_events: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "model.linesight.stg_downtime_events"} */
+
+  
+  create view "linesight"."main_staging"."stg_downtime_events__dbt_tmp" as (
+    with source as (
+    select * from "linesight"."raw"."downtime_events"
+),
+
+renamed as (
+    select
+        machine_id,
+        line_id,
+        cast(downtime_start_ts as timestamp) as downtime_start_ts,
+        cast(downtime_hours as double) as downtime_hours,
+        reason
+    from source
+)
+
+select * from renamed
+  );
+
+[0m21:30:02.611428 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:02.616422 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.stg_downtime_events"
+[0m21:30:02.616774 [debug] [Thread-1 (]: On model.linesight.stg_downtime_events: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "model.linesight.stg_downtime_events"} */
+alter view "linesight"."main_staging"."stg_downtime_events" rename to "stg_downtime_events__dbt_backup"
+[0m21:30:02.617420 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:30:02.619616 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.stg_downtime_events"
+[0m21:30:02.619969 [debug] [Thread-1 (]: On model.linesight.stg_downtime_events: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "model.linesight.stg_downtime_events"} */
+alter view "linesight"."main_staging"."stg_downtime_events__dbt_tmp" rename to "stg_downtime_events"
+[0m21:30:02.620591 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:30:02.636390 [debug] [Thread-1 (]: On model.linesight.stg_downtime_events: COMMIT
+[0m21:30:02.636753 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.stg_downtime_events"
+[0m21:30:02.637014 [debug] [Thread-1 (]: On model.linesight.stg_downtime_events: COMMIT
+[0m21:30:02.638994 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:30:02.645053 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.stg_downtime_events"
+[0m21:30:02.645437 [debug] [Thread-1 (]: On model.linesight.stg_downtime_events: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "model.linesight.stg_downtime_events"} */
+
+      drop view if exists "linesight"."main_staging"."stg_downtime_events__dbt_backup" cascade
+    
+[0m21:30:02.646456 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:02.648753 [debug] [Thread-1 (]: On model.linesight.stg_downtime_events: Close
+[0m21:30:02.650531 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '47ce5fd8-266e-4673-a115-1cf6dba27cb3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fce321a4230>]}
+[0m21:30:02.651154 [info ] [Thread-1 (]: 1 of 11 OK created sql view model main_staging.stg_downtime_events ............. [[32mOK[0m in 0.08s]
+[0m21:30:02.651763 [debug] [Thread-1 (]: Finished running node model.linesight.stg_downtime_events
+[0m21:30:02.652154 [debug] [Thread-1 (]: Began running node model.linesight.stg_machine_daily_oee
+[0m21:30:02.652622 [info ] [Thread-1 (]: 2 of 11 START sql view model main_staging.stg_machine_daily_oee ................ [RUN]
+[0m21:30:02.653177 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.linesight.stg_downtime_events, now model.linesight.stg_machine_daily_oee)
+[0m21:30:02.653471 [debug] [Thread-1 (]: Began compiling node model.linesight.stg_machine_daily_oee
+[0m21:30:02.655175 [debug] [Thread-1 (]: Writing injected SQL for node "model.linesight.stg_machine_daily_oee"
+[0m21:30:02.655745 [debug] [Thread-1 (]: Began executing node model.linesight.stg_machine_daily_oee
+[0m21:30:02.658520 [debug] [Thread-1 (]: Writing runtime sql for node "model.linesight.stg_machine_daily_oee"
+[0m21:30:02.659112 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.stg_machine_daily_oee"
+[0m21:30:02.659424 [debug] [Thread-1 (]: On model.linesight.stg_machine_daily_oee: BEGIN
+[0m21:30:02.659835 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:30:02.660457 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:02.660897 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.stg_machine_daily_oee"
+[0m21:30:02.661462 [debug] [Thread-1 (]: On model.linesight.stg_machine_daily_oee: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "model.linesight.stg_machine_daily_oee"} */
+
+  
+  create view "linesight"."main_staging"."stg_machine_daily_oee__dbt_tmp" as (
+    -- Staging over the table synced from Databricks (Delta Sharing or a
+-- scheduled load, see snowflake_sync/schema.sql). This is the exact
+-- bridge point between the two platforms in this hybrid architecture.
+
+with source as (
+    select * from "linesight"."raw"."fct_machine_daily_oee"
+),
+
+renamed as (
+    select
+        machine_id,
+        line_id,
+        cast(production_date as date) as production_date,
+        cast(units_measured as integer) as units_measured,
+        cast(units_in_spec as integer) as units_in_spec,
+        cast(quality_rate as double) as quality_rate,
+        cast(downtime_hours as double) as downtime_hours,
+        cast(planned_hours as double) as planned_hours,
+        cast(availability as double) as availability
+    from source
+)
+
+select * from renamed
+  );
+
+[0m21:30:02.662692 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:02.664921 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.stg_machine_daily_oee"
+[0m21:30:02.665500 [debug] [Thread-1 (]: On model.linesight.stg_machine_daily_oee: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "model.linesight.stg_machine_daily_oee"} */
+alter view "linesight"."main_staging"."stg_machine_daily_oee" rename to "stg_machine_daily_oee__dbt_backup"
+[0m21:30:02.666359 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:30:02.668422 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.stg_machine_daily_oee"
+[0m21:30:02.668764 [debug] [Thread-1 (]: On model.linesight.stg_machine_daily_oee: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "model.linesight.stg_machine_daily_oee"} */
+alter view "linesight"."main_staging"."stg_machine_daily_oee__dbt_tmp" rename to "stg_machine_daily_oee"
+[0m21:30:02.669403 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:30:02.670859 [debug] [Thread-1 (]: On model.linesight.stg_machine_daily_oee: COMMIT
+[0m21:30:02.671208 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.stg_machine_daily_oee"
+[0m21:30:02.671528 [debug] [Thread-1 (]: On model.linesight.stg_machine_daily_oee: COMMIT
+[0m21:30:02.672460 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:02.673794 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.stg_machine_daily_oee"
+[0m21:30:02.674107 [debug] [Thread-1 (]: On model.linesight.stg_machine_daily_oee: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "model.linesight.stg_machine_daily_oee"} */
+
+      drop view if exists "linesight"."main_staging"."stg_machine_daily_oee__dbt_backup" cascade
+    
+[0m21:30:02.675031 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:02.676316 [debug] [Thread-1 (]: On model.linesight.stg_machine_daily_oee: Close
+[0m21:30:02.676862 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '47ce5fd8-266e-4673-a115-1cf6dba27cb3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fce311d3830>]}
+[0m21:30:02.677448 [info ] [Thread-1 (]: 2 of 11 OK created sql view model main_staging.stg_machine_daily_oee ........... [[32mOK[0m in 0.02s]
+[0m21:30:02.677916 [debug] [Thread-1 (]: Finished running node model.linesight.stg_machine_daily_oee
+[0m21:30:02.678260 [debug] [Thread-1 (]: Began running node test.linesight.not_null_stg_downtime_events_machine_id.7e687c8210
+[0m21:30:02.678540 [info ] [Thread-1 (]: 3 of 11 START test not_null_stg_downtime_events_machine_id ..................... [RUN]
+[0m21:30:02.679044 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.linesight.stg_machine_daily_oee, now test.linesight.not_null_stg_downtime_events_machine_id.7e687c8210)
+[0m21:30:02.679378 [debug] [Thread-1 (]: Began compiling node test.linesight.not_null_stg_downtime_events_machine_id.7e687c8210
+[0m21:30:02.692805 [debug] [Thread-1 (]: Writing injected SQL for node "test.linesight.not_null_stg_downtime_events_machine_id.7e687c8210"
+[0m21:30:02.693404 [debug] [Thread-1 (]: Began executing node test.linesight.not_null_stg_downtime_events_machine_id.7e687c8210
+[0m21:30:02.710399 [debug] [Thread-1 (]: Writing runtime sql for node "test.linesight.not_null_stg_downtime_events_machine_id.7e687c8210"
+[0m21:30:02.711042 [debug] [Thread-1 (]: Using duckdb connection "test.linesight.not_null_stg_downtime_events_machine_id.7e687c8210"
+[0m21:30:02.711405 [debug] [Thread-1 (]: On test.linesight.not_null_stg_downtime_events_machine_id.7e687c8210: BEGIN
+[0m21:30:02.711700 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:30:02.712246 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:02.712521 [debug] [Thread-1 (]: Using duckdb connection "test.linesight.not_null_stg_downtime_events_machine_id.7e687c8210"
+[0m21:30:02.712769 [debug] [Thread-1 (]: On test.linesight.not_null_stg_downtime_events_machine_id.7e687c8210: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "test.linesight.not_null_stg_downtime_events_machine_id.7e687c8210"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select machine_id
+from "linesight"."main_staging"."stg_downtime_events"
+where machine_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:30:02.713877 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:02.717107 [debug] [Thread-1 (]: On test.linesight.not_null_stg_downtime_events_machine_id.7e687c8210: ROLLBACK
+[0m21:30:02.717654 [debug] [Thread-1 (]: On test.linesight.not_null_stg_downtime_events_machine_id.7e687c8210: Close
+[0m21:30:02.718243 [info ] [Thread-1 (]: 3 of 11 PASS not_null_stg_downtime_events_machine_id ........................... [[32mPASS[0m in 0.04s]
+[0m21:30:02.718764 [debug] [Thread-1 (]: Finished running node test.linesight.not_null_stg_downtime_events_machine_id.7e687c8210
+[0m21:30:02.719108 [debug] [Thread-1 (]: Began running node test.linesight.not_null_stg_machine_daily_oee_availability.0096d7724e
+[0m21:30:02.719537 [info ] [Thread-1 (]: 4 of 11 START test not_null_stg_machine_daily_oee_availability ................. [RUN]
+[0m21:30:02.719927 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.linesight.not_null_stg_downtime_events_machine_id.7e687c8210, now test.linesight.not_null_stg_machine_daily_oee_availability.0096d7724e)
+[0m21:30:02.720312 [debug] [Thread-1 (]: Began compiling node test.linesight.not_null_stg_machine_daily_oee_availability.0096d7724e
+[0m21:30:02.726060 [debug] [Thread-1 (]: Writing injected SQL for node "test.linesight.not_null_stg_machine_daily_oee_availability.0096d7724e"
+[0m21:30:02.726626 [debug] [Thread-1 (]: Began executing node test.linesight.not_null_stg_machine_daily_oee_availability.0096d7724e
+[0m21:30:02.728132 [debug] [Thread-1 (]: Writing runtime sql for node "test.linesight.not_null_stg_machine_daily_oee_availability.0096d7724e"
+[0m21:30:02.728699 [debug] [Thread-1 (]: Using duckdb connection "test.linesight.not_null_stg_machine_daily_oee_availability.0096d7724e"
+[0m21:30:02.728998 [debug] [Thread-1 (]: On test.linesight.not_null_stg_machine_daily_oee_availability.0096d7724e: BEGIN
+[0m21:30:02.729261 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:30:02.729750 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:30:02.730008 [debug] [Thread-1 (]: Using duckdb connection "test.linesight.not_null_stg_machine_daily_oee_availability.0096d7724e"
+[0m21:30:02.730299 [debug] [Thread-1 (]: On test.linesight.not_null_stg_machine_daily_oee_availability.0096d7724e: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "test.linesight.not_null_stg_machine_daily_oee_availability.0096d7724e"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select availability
+from "linesight"."main_staging"."stg_machine_daily_oee"
+where availability is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:30:02.731534 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:02.732956 [debug] [Thread-1 (]: On test.linesight.not_null_stg_machine_daily_oee_availability.0096d7724e: ROLLBACK
+[0m21:30:02.733522 [debug] [Thread-1 (]: On test.linesight.not_null_stg_machine_daily_oee_availability.0096d7724e: Close
+[0m21:30:02.734112 [info ] [Thread-1 (]: 4 of 11 PASS not_null_stg_machine_daily_oee_availability ....................... [[32mPASS[0m in 0.01s]
+[0m21:30:02.734632 [debug] [Thread-1 (]: Finished running node test.linesight.not_null_stg_machine_daily_oee_availability.0096d7724e
+[0m21:30:02.734972 [debug] [Thread-1 (]: Began running node test.linesight.not_null_stg_machine_daily_oee_machine_id.56c2bc9790
+[0m21:30:02.735327 [info ] [Thread-1 (]: 5 of 11 START test not_null_stg_machine_daily_oee_machine_id ................... [RUN]
+[0m21:30:02.735772 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.linesight.not_null_stg_machine_daily_oee_availability.0096d7724e, now test.linesight.not_null_stg_machine_daily_oee_machine_id.56c2bc9790)
+[0m21:30:02.736066 [debug] [Thread-1 (]: Began compiling node test.linesight.not_null_stg_machine_daily_oee_machine_id.56c2bc9790
+[0m21:30:02.741902 [debug] [Thread-1 (]: Writing injected SQL for node "test.linesight.not_null_stg_machine_daily_oee_machine_id.56c2bc9790"
+[0m21:30:02.742455 [debug] [Thread-1 (]: Began executing node test.linesight.not_null_stg_machine_daily_oee_machine_id.56c2bc9790
+[0m21:30:02.743896 [debug] [Thread-1 (]: Writing runtime sql for node "test.linesight.not_null_stg_machine_daily_oee_machine_id.56c2bc9790"
+[0m21:30:02.744452 [debug] [Thread-1 (]: Using duckdb connection "test.linesight.not_null_stg_machine_daily_oee_machine_id.56c2bc9790"
+[0m21:30:02.744750 [debug] [Thread-1 (]: On test.linesight.not_null_stg_machine_daily_oee_machine_id.56c2bc9790: BEGIN
+[0m21:30:02.744990 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:30:02.745509 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:30:02.745808 [debug] [Thread-1 (]: Using duckdb connection "test.linesight.not_null_stg_machine_daily_oee_machine_id.56c2bc9790"
+[0m21:30:02.746066 [debug] [Thread-1 (]: On test.linesight.not_null_stg_machine_daily_oee_machine_id.56c2bc9790: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "test.linesight.not_null_stg_machine_daily_oee_machine_id.56c2bc9790"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select machine_id
+from "linesight"."main_staging"."stg_machine_daily_oee"
+where machine_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:30:02.747207 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:02.748520 [debug] [Thread-1 (]: On test.linesight.not_null_stg_machine_daily_oee_machine_id.56c2bc9790: ROLLBACK
+[0m21:30:02.749016 [debug] [Thread-1 (]: On test.linesight.not_null_stg_machine_daily_oee_machine_id.56c2bc9790: Close
+[0m21:30:02.749543 [info ] [Thread-1 (]: 5 of 11 PASS not_null_stg_machine_daily_oee_machine_id ......................... [[32mPASS[0m in 0.01s]
+[0m21:30:02.749993 [debug] [Thread-1 (]: Finished running node test.linesight.not_null_stg_machine_daily_oee_machine_id.56c2bc9790
+[0m21:30:02.750321 [debug] [Thread-1 (]: Began running node model.linesight.fct_downtime_pareto
+[0m21:30:02.750786 [info ] [Thread-1 (]: 6 of 11 START sql table model main_marts.fct_downtime_pareto ................... [RUN]
+[0m21:30:02.751212 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.linesight.not_null_stg_machine_daily_oee_machine_id.56c2bc9790, now model.linesight.fct_downtime_pareto)
+[0m21:30:02.751519 [debug] [Thread-1 (]: Began compiling node model.linesight.fct_downtime_pareto
+[0m21:30:02.753314 [debug] [Thread-1 (]: Writing injected SQL for node "model.linesight.fct_downtime_pareto"
+[0m21:30:02.753854 [debug] [Thread-1 (]: Began executing node model.linesight.fct_downtime_pareto
+[0m21:30:02.789102 [debug] [Thread-1 (]: Writing runtime sql for node "model.linesight.fct_downtime_pareto"
+[0m21:30:02.789695 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.fct_downtime_pareto"
+[0m21:30:02.789998 [debug] [Thread-1 (]: On model.linesight.fct_downtime_pareto: BEGIN
+[0m21:30:02.790260 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:30:02.790753 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:30:02.791011 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.fct_downtime_pareto"
+[0m21:30:02.791298 [debug] [Thread-1 (]: On model.linesight.fct_downtime_pareto: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "model.linesight.fct_downtime_pareto"} */
+
+    
+
+    create  table
+      "linesight"."main_marts"."fct_downtime_pareto__dbt_tmp"
+  
+    
+    as (
+      -- CERTIFIED. Downtime-reason Pareto, the actionable list a plant
+-- manager works from to prioritize improvement projects.
+
+
+
+with by_reason as (
+    select
+        reason,
+        count(*) as event_count,
+        round(sum(downtime_hours), 2) as total_downtime_hours
+    from "linesight"."main_staging"."stg_downtime_events"
+    group by reason
+)
+
+select
+    reason,
+    event_count,
+    total_downtime_hours,
+    round(total_downtime_hours * 1.0 / sum(total_downtime_hours) over (), 4) as pct_of_total_downtime
+from by_reason
+order by total_downtime_hours desc
+    );
+    
+  
+[0m21:30:02.796916 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m21:30:02.801313 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.fct_downtime_pareto"
+[0m21:30:02.801665 [debug] [Thread-1 (]: On model.linesight.fct_downtime_pareto: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "model.linesight.fct_downtime_pareto"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE database_name = 'linesight'
+      AND schema_name = 'main_marts'
+      AND table_name = 'fct_downtime_pareto'
+  
+[0m21:30:02.802517 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:02.805216 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.fct_downtime_pareto"
+[0m21:30:02.805546 [debug] [Thread-1 (]: On model.linesight.fct_downtime_pareto: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "model.linesight.fct_downtime_pareto"} */
+alter table "linesight"."main_marts"."fct_downtime_pareto" rename to "fct_downtime_pareto__dbt_backup"
+[0m21:30:02.806184 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:30:02.808038 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.fct_downtime_pareto"
+[0m21:30:02.808384 [debug] [Thread-1 (]: On model.linesight.fct_downtime_pareto: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "model.linesight.fct_downtime_pareto"} */
+alter table "linesight"."main_marts"."fct_downtime_pareto__dbt_tmp" rename to "fct_downtime_pareto"
+[0m21:30:02.808975 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:30:02.813610 [debug] [Thread-1 (]: On model.linesight.fct_downtime_pareto: COMMIT
+[0m21:30:02.813957 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.fct_downtime_pareto"
+[0m21:30:02.814263 [debug] [Thread-1 (]: On model.linesight.fct_downtime_pareto: COMMIT
+[0m21:30:02.815411 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:02.816990 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.fct_downtime_pareto"
+[0m21:30:02.817346 [debug] [Thread-1 (]: On model.linesight.fct_downtime_pareto: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "model.linesight.fct_downtime_pareto"} */
+
+      drop table if exists "linesight"."main_marts"."fct_downtime_pareto__dbt_backup" cascade
+    
+[0m21:30:02.818405 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:02.819709 [debug] [Thread-1 (]: On model.linesight.fct_downtime_pareto: Close
+[0m21:30:02.820271 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '47ce5fd8-266e-4673-a115-1cf6dba27cb3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fce31056a50>]}
+[0m21:30:02.820813 [info ] [Thread-1 (]: 6 of 11 OK created sql table model main_marts.fct_downtime_pareto .............. [[32mOK[0m in 0.07s]
+[0m21:30:02.821466 [debug] [Thread-1 (]: Finished running node model.linesight.fct_downtime_pareto
+[0m21:30:02.821811 [debug] [Thread-1 (]: Began running node model.linesight.fct_line_oee
+[0m21:30:02.822314 [info ] [Thread-1 (]: 7 of 11 START sql table model main_marts.fct_line_oee .......................... [RUN]
+[0m21:30:02.822711 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.linesight.fct_downtime_pareto, now model.linesight.fct_line_oee)
+[0m21:30:02.823011 [debug] [Thread-1 (]: Began compiling node model.linesight.fct_line_oee
+[0m21:30:02.824773 [debug] [Thread-1 (]: Writing injected SQL for node "model.linesight.fct_line_oee"
+[0m21:30:02.825311 [debug] [Thread-1 (]: Began executing node model.linesight.fct_line_oee
+[0m21:30:02.827962 [debug] [Thread-1 (]: Writing runtime sql for node "model.linesight.fct_line_oee"
+[0m21:30:02.828556 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.fct_line_oee"
+[0m21:30:02.828854 [debug] [Thread-1 (]: On model.linesight.fct_line_oee: BEGIN
+[0m21:30:02.829127 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:30:02.829625 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:30:02.829963 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.fct_line_oee"
+[0m21:30:02.830273 [debug] [Thread-1 (]: On model.linesight.fct_line_oee: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "model.linesight.fct_line_oee"} */
+
+    
+
+    create  table
+      "linesight"."main_marts"."fct_line_oee__dbt_tmp"
+  
+    
+    as (
+      -- CERTIFIED. OEE = availability x performance x quality. Performance
+-- assumed 1.0 (no throughput-target data in this dataset); a real
+-- deployment joins a target-rate table for the performance component.
+
+
+
+select
+    line_id,
+    production_date,
+    round(avg(availability), 4) as availability,
+    round(avg(quality_rate), 4) as quality_rate,
+    1.0 as performance_assumed,
+    round(avg(availability) * avg(quality_rate) * 1.0, 4) as oee
+from "linesight"."main_staging"."stg_machine_daily_oee"
+group by line_id, production_date
+    );
+    
+  
+[0m21:30:02.833518 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m21:30:02.834581 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.fct_line_oee"
+[0m21:30:02.834904 [debug] [Thread-1 (]: On model.linesight.fct_line_oee: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "model.linesight.fct_line_oee"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE database_name = 'linesight'
+      AND schema_name = 'main_marts'
+      AND table_name = 'fct_line_oee'
+  
+[0m21:30:02.835804 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:02.837817 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.fct_line_oee"
+[0m21:30:02.838168 [debug] [Thread-1 (]: On model.linesight.fct_line_oee: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "model.linesight.fct_line_oee"} */
+alter table "linesight"."main_marts"."fct_line_oee" rename to "fct_line_oee__dbt_backup"
+[0m21:30:02.838833 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:30:02.840885 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.fct_line_oee"
+[0m21:30:02.841356 [debug] [Thread-1 (]: On model.linesight.fct_line_oee: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "model.linesight.fct_line_oee"} */
+alter table "linesight"."main_marts"."fct_line_oee__dbt_tmp" rename to "fct_line_oee"
+[0m21:30:02.841990 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:30:02.843643 [debug] [Thread-1 (]: On model.linesight.fct_line_oee: COMMIT
+[0m21:30:02.843965 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.fct_line_oee"
+[0m21:30:02.844261 [debug] [Thread-1 (]: On model.linesight.fct_line_oee: COMMIT
+[0m21:30:02.845418 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:02.846789 [debug] [Thread-1 (]: Using duckdb connection "model.linesight.fct_line_oee"
+[0m21:30:02.847124 [debug] [Thread-1 (]: On model.linesight.fct_line_oee: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "model.linesight.fct_line_oee"} */
+
+      drop table if exists "linesight"."main_marts"."fct_line_oee__dbt_backup" cascade
+    
+[0m21:30:02.848224 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:02.849476 [debug] [Thread-1 (]: On model.linesight.fct_line_oee: Close
+[0m21:30:02.849973 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '47ce5fd8-266e-4673-a115-1cf6dba27cb3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fce31069d60>]}
+[0m21:30:02.850538 [info ] [Thread-1 (]: 7 of 11 OK created sql table model main_marts.fct_line_oee ..................... [[32mOK[0m in 0.03s]
+[0m21:30:02.851030 [debug] [Thread-1 (]: Finished running node model.linesight.fct_line_oee
+[0m21:30:02.851395 [debug] [Thread-1 (]: Began running node test.linesight.not_null_fct_downtime_pareto_reason.d72c871ce2
+[0m21:30:02.851854 [info ] [Thread-1 (]: 8 of 11 START test not_null_fct_downtime_pareto_reason ......................... [RUN]
+[0m21:30:02.852276 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.linesight.fct_line_oee, now test.linesight.not_null_fct_downtime_pareto_reason.d72c871ce2)
+[0m21:30:02.852541 [debug] [Thread-1 (]: Began compiling node test.linesight.not_null_fct_downtime_pareto_reason.d72c871ce2
+[0m21:30:02.858318 [debug] [Thread-1 (]: Writing injected SQL for node "test.linesight.not_null_fct_downtime_pareto_reason.d72c871ce2"
+[0m21:30:02.858873 [debug] [Thread-1 (]: Began executing node test.linesight.not_null_fct_downtime_pareto_reason.d72c871ce2
+[0m21:30:02.860310 [debug] [Thread-1 (]: Writing runtime sql for node "test.linesight.not_null_fct_downtime_pareto_reason.d72c871ce2"
+[0m21:30:02.860836 [debug] [Thread-1 (]: Using duckdb connection "test.linesight.not_null_fct_downtime_pareto_reason.d72c871ce2"
+[0m21:30:02.861148 [debug] [Thread-1 (]: On test.linesight.not_null_fct_downtime_pareto_reason.d72c871ce2: BEGIN
+[0m21:30:02.861522 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:30:02.862035 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:30:02.862372 [debug] [Thread-1 (]: Using duckdb connection "test.linesight.not_null_fct_downtime_pareto_reason.d72c871ce2"
+[0m21:30:02.862620 [debug] [Thread-1 (]: On test.linesight.not_null_fct_downtime_pareto_reason.d72c871ce2: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "test.linesight.not_null_fct_downtime_pareto_reason.d72c871ce2"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select reason
+from "linesight"."main_marts"."fct_downtime_pareto"
+where reason is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:30:02.863529 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:02.864985 [debug] [Thread-1 (]: On test.linesight.not_null_fct_downtime_pareto_reason.d72c871ce2: ROLLBACK
+[0m21:30:02.865527 [debug] [Thread-1 (]: On test.linesight.not_null_fct_downtime_pareto_reason.d72c871ce2: Close
+[0m21:30:02.866025 [info ] [Thread-1 (]: 8 of 11 PASS not_null_fct_downtime_pareto_reason ............................... [[32mPASS[0m in 0.01s]
+[0m21:30:02.866522 [debug] [Thread-1 (]: Finished running node test.linesight.not_null_fct_downtime_pareto_reason.d72c871ce2
+[0m21:30:02.866824 [debug] [Thread-1 (]: Began running node test.linesight.unique_fct_downtime_pareto_reason.f60e42875a
+[0m21:30:02.867165 [info ] [Thread-1 (]: 9 of 11 START test unique_fct_downtime_pareto_reason ........................... [RUN]
+[0m21:30:02.867571 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.linesight.not_null_fct_downtime_pareto_reason.d72c871ce2, now test.linesight.unique_fct_downtime_pareto_reason.f60e42875a)
+[0m21:30:02.867849 [debug] [Thread-1 (]: Began compiling node test.linesight.unique_fct_downtime_pareto_reason.f60e42875a
+[0m21:30:02.875383 [debug] [Thread-1 (]: Writing injected SQL for node "test.linesight.unique_fct_downtime_pareto_reason.f60e42875a"
+[0m21:30:02.875947 [debug] [Thread-1 (]: Began executing node test.linesight.unique_fct_downtime_pareto_reason.f60e42875a
+[0m21:30:02.877302 [debug] [Thread-1 (]: Writing runtime sql for node "test.linesight.unique_fct_downtime_pareto_reason.f60e42875a"
+[0m21:30:02.877808 [debug] [Thread-1 (]: Using duckdb connection "test.linesight.unique_fct_downtime_pareto_reason.f60e42875a"
+[0m21:30:02.878105 [debug] [Thread-1 (]: On test.linesight.unique_fct_downtime_pareto_reason.f60e42875a: BEGIN
+[0m21:30:02.878348 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:30:02.878851 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:30:02.879174 [debug] [Thread-1 (]: Using duckdb connection "test.linesight.unique_fct_downtime_pareto_reason.f60e42875a"
+[0m21:30:02.879440 [debug] [Thread-1 (]: On test.linesight.unique_fct_downtime_pareto_reason.f60e42875a: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "test.linesight.unique_fct_downtime_pareto_reason.f60e42875a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    reason as unique_field,
+    count(*) as n_records
+
+from "linesight"."main_marts"."fct_downtime_pareto"
+where reason is not null
+group by reason
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:30:02.880798 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:02.882274 [debug] [Thread-1 (]: On test.linesight.unique_fct_downtime_pareto_reason.f60e42875a: ROLLBACK
+[0m21:30:02.882785 [debug] [Thread-1 (]: On test.linesight.unique_fct_downtime_pareto_reason.f60e42875a: Close
+[0m21:30:02.883314 [info ] [Thread-1 (]: 9 of 11 PASS unique_fct_downtime_pareto_reason ................................. [[32mPASS[0m in 0.02s]
+[0m21:30:02.883841 [debug] [Thread-1 (]: Finished running node test.linesight.unique_fct_downtime_pareto_reason.f60e42875a
+[0m21:30:02.884184 [debug] [Thread-1 (]: Began running node test.linesight.not_null_fct_line_oee_line_id.652f94574a
+[0m21:30:02.884487 [info ] [Thread-1 (]: 10 of 11 START test not_null_fct_line_oee_line_id .............................. [RUN]
+[0m21:30:02.884855 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.linesight.unique_fct_downtime_pareto_reason.f60e42875a, now test.linesight.not_null_fct_line_oee_line_id.652f94574a)
+[0m21:30:02.885144 [debug] [Thread-1 (]: Began compiling node test.linesight.not_null_fct_line_oee_line_id.652f94574a
+[0m21:30:02.890791 [debug] [Thread-1 (]: Writing injected SQL for node "test.linesight.not_null_fct_line_oee_line_id.652f94574a"
+[0m21:30:02.891378 [debug] [Thread-1 (]: Began executing node test.linesight.not_null_fct_line_oee_line_id.652f94574a
+[0m21:30:02.892882 [debug] [Thread-1 (]: Writing runtime sql for node "test.linesight.not_null_fct_line_oee_line_id.652f94574a"
+[0m21:30:02.893451 [debug] [Thread-1 (]: Using duckdb connection "test.linesight.not_null_fct_line_oee_line_id.652f94574a"
+[0m21:30:02.893765 [debug] [Thread-1 (]: On test.linesight.not_null_fct_line_oee_line_id.652f94574a: BEGIN
+[0m21:30:02.894053 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:30:02.894743 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:02.895047 [debug] [Thread-1 (]: Using duckdb connection "test.linesight.not_null_fct_line_oee_line_id.652f94574a"
+[0m21:30:02.895353 [debug] [Thread-1 (]: On test.linesight.not_null_fct_line_oee_line_id.652f94574a: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "test.linesight.not_null_fct_line_oee_line_id.652f94574a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select line_id
+from "linesight"."main_marts"."fct_line_oee"
+where line_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:30:02.896246 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:30:02.897563 [debug] [Thread-1 (]: On test.linesight.not_null_fct_line_oee_line_id.652f94574a: ROLLBACK
+[0m21:30:02.898177 [debug] [Thread-1 (]: On test.linesight.not_null_fct_line_oee_line_id.652f94574a: Close
+[0m21:30:02.898699 [info ] [Thread-1 (]: 10 of 11 PASS not_null_fct_line_oee_line_id .................................... [[32mPASS[0m in 0.01s]
+[0m21:30:02.899225 [debug] [Thread-1 (]: Finished running node test.linesight.not_null_fct_line_oee_line_id.652f94574a
+[0m21:30:02.899565 [debug] [Thread-1 (]: Began running node test.linesight.not_null_fct_line_oee_oee.5b6c0e23d6
+[0m21:30:02.899868 [info ] [Thread-1 (]: 11 of 11 START test not_null_fct_line_oee_oee .................................. [RUN]
+[0m21:30:02.900242 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.linesight.not_null_fct_line_oee_line_id.652f94574a, now test.linesight.not_null_fct_line_oee_oee.5b6c0e23d6)
+[0m21:30:02.900492 [debug] [Thread-1 (]: Began compiling node test.linesight.not_null_fct_line_oee_oee.5b6c0e23d6
+[0m21:30:02.906162 [debug] [Thread-1 (]: Writing injected SQL for node "test.linesight.not_null_fct_line_oee_oee.5b6c0e23d6"
+[0m21:30:02.906685 [debug] [Thread-1 (]: Began executing node test.linesight.not_null_fct_line_oee_oee.5b6c0e23d6
+[0m21:30:02.908056 [debug] [Thread-1 (]: Writing runtime sql for node "test.linesight.not_null_fct_line_oee_oee.5b6c0e23d6"
+[0m21:30:02.908606 [debug] [Thread-1 (]: Using duckdb connection "test.linesight.not_null_fct_line_oee_oee.5b6c0e23d6"
+[0m21:30:02.908900 [debug] [Thread-1 (]: On test.linesight.not_null_fct_line_oee_oee.5b6c0e23d6: BEGIN
+[0m21:30:02.909151 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:30:02.909614 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:30:02.909876 [debug] [Thread-1 (]: Using duckdb connection "test.linesight.not_null_fct_line_oee_oee.5b6c0e23d6"
+[0m21:30:02.910141 [debug] [Thread-1 (]: On test.linesight.not_null_fct_line_oee_oee.5b6c0e23d6: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "linesight", "target_name": "dev", "node_id": "test.linesight.not_null_fct_line_oee_oee.5b6c0e23d6"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select oee
+from "linesight"."main_marts"."fct_line_oee"
+where oee is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m21:30:02.910924 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m21:30:02.912307 [debug] [Thread-1 (]: On test.linesight.not_null_fct_line_oee_oee.5b6c0e23d6: ROLLBACK
+[0m21:30:02.912829 [debug] [Thread-1 (]: On test.linesight.not_null_fct_line_oee_oee.5b6c0e23d6: Close
+[0m21:30:02.913399 [info ] [Thread-1 (]: 11 of 11 PASS not_null_fct_line_oee_oee ........................................ [[32mPASS[0m in 0.01s]
+[0m21:30:02.913905 [debug] [Thread-1 (]: Finished running node test.linesight.not_null_fct_line_oee_oee.5b6c0e23d6
+[0m21:30:02.915102 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:30:02.915442 [debug] [MainThread]: On master: BEGIN
+[0m21:30:02.915764 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:30:02.916308 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m21:30:02.916600 [debug] [MainThread]: On master: COMMIT
+[0m21:30:02.916836 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:30:02.917044 [debug] [MainThread]: On master: COMMIT
+[0m21:30:02.917447 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m21:30:02.917666 [debug] [MainThread]: On master: Close
+[0m21:30:02.917996 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:30:02.918255 [debug] [MainThread]: Connection 'test.linesight.not_null_fct_line_oee_oee.5b6c0e23d6' was properly closed.
+[0m21:30:02.918442 [debug] [MainThread]: Connection 'list_linesight_main_staging' was properly closed.
+[0m21:30:02.918701 [info ] [MainThread]: 
+[0m21:30:02.918986 [info ] [MainThread]: Finished running 2 table models, 7 data tests, 2 view models in 0 hours 0 minutes and 0.46 seconds (0.46s).
+[0m21:30:02.920626 [debug] [MainThread]: Command end result
+[0m21:30:02.947666 [debug] [MainThread]: Wrote artifact WritableManifest to /home/claude/linesight/dbt/target/manifest.json
+[0m21:30:02.949941 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/claude/linesight/dbt/target/semantic_manifest.json
+[0m21:30:02.952210 [debug] [MainThread]: Wrote artifact OsiDocument to /home/claude/linesight/dbt/target/osi_document.json
+[0m21:30:02.959049 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/claude/linesight/dbt/target/run_results.json
+[0m21:30:02.959421 [info ] [MainThread]: 
+[0m21:30:02.959819 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:30:02.960125 [info ] [MainThread]: 
+[0m21:30:02.960432 [info ] [MainThread]: Done. PASS=11 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=11
+[0m21:30:02.961220 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 1.4375056, "process_in_blocks": "0", "process_kernel_time": 0.211778, "process_mem_max_rss": "180516", "process_out_blocks": "3008", "process_user_time": 2.763918}
+[0m21:30:02.961640 [debug] [MainThread]: Command `dbt build` succeeded at 21:30:02.961557 after 1.44 seconds
+[0m21:30:02.962032 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fce368dacc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fce36896f60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fce37c9b3e0>]}
+[0m21:30:02.962351 [debug] [MainThread]: Flushing usage events
+[0m21:30:02.996368 [debug] [MainThread]: An error was encountered while trying to flush usage events

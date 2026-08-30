@@ -1,0 +1,30 @@
+version: 2
+
+sources:
+  - name: raw
+    description: >
+      Data synced from Databricks (gold-layer OEE facts) and produced
+      locally by the SPC module. In production, fct_machine_daily_oee
+      arrives via Delta Sharing or a scheduled load from Databricks,
+      the bridge point of this hybrid architecture.
+    schema: raw
+    tables:
+      - name: fct_machine_daily_oee
+      - name: spc_control_chart_data
+      - name: process_capability
+      - name: downtime_events
+
+models:
+  - name: stg_machine_daily_oee
+    description: One row per machine per production day, synced from Databricks.
+    columns:
+      - name: machine_id
+        tests: [not_null]
+      - name: availability
+        tests: [not_null]
+
+  - name: stg_downtime_events
+    description: One row per downtime event.
+    columns:
+      - name: machine_id
+        tests: [not_null]

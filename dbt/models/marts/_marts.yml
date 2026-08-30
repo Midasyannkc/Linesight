@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: fct_line_oee
+    description: "CERTIFIED. Line-level daily OEE, availability x performance x quality."
+    columns:
+      - name: line_id
+        tests: [not_null]
+      - name: oee
+        tests: [not_null]
+
+  - name: fct_downtime_pareto
+    description: "CERTIFIED. Downtime-reason Pareto, the prioritized improvement list."
+    columns:
+      - name: reason
+        tests: [unique, not_null]
